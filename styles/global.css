@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 .container{
-    padding:unset 1rem;
+    padding-left:1rem;
+    padding-right:1rem;
     margin:auto;
 }
 @media screen and (min-width:768px) {
@@ -21,13 +22,13 @@
 
 @media screen and (min-width:1200px) {
     .container{
-        max-width: 700px;
+        max-width: 1100px;
     }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1400) {
     .container{
-        max-width: 700px;
+        max-width: 1200px;
     }
 }
 

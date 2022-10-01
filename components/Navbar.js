@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 export const Navbar = () => {
   return (
     <>
@@ -6,7 +7,7 @@ export const Navbar = () => {
         {`
           nav {
             width: 100%;
-            padding: 1rem;
+            padding: 1rem 0;
             background: #eee;
           }
           .main-ul,
@@ -14,6 +15,7 @@ export const Navbar = () => {
             display: flex;
             width: 100%;
             justify-content: space-between;
+            align-items: center;
             gap: 1.5rem;
           }
           nav ul li {
@@ -22,6 +24,7 @@ export const Navbar = () => {
           }
         `}
       </style>
+
       <nav>
         <ul className="container main-ul">
           <li>

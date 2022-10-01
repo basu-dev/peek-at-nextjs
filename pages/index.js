@@ -1,29 +1,29 @@
 import { useEffect, useState } from "react";
+
 export default () => {
-  const [userName, setUserName] = useState("basu");
+  const [userName, setUserName] = useState("");
   const [greeting, setGreeting] = useState("");
+
   useEffect(() => {
-    let a = new AbortController();
+    let b = new AbortController();
     const fetchData = async () => {
       try {
-        let res = await fetch("/api", { signal: a.signal }).then((res) =>
+        let res = await fetch("/api", { signal: b.signal }).then((res) =>
           res.json()
         );
         setUserName(res.name);
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     };
     fetchData();
 
     return () => {
-      a.abort();
+      b.abort();
     };
   }, []);
 
   useEffect(() => setGreeting(`Hola ${userName}`), [userName]);
 
-  return (
-    <>
-      <div>{greeting}</div>
-    </>
-  );
+  return <>{greeting}</>;
 };
