@@ -8,7 +8,8 @@ export const Navbar = () => {
           nav {
             width: 100%;
             padding: 1rem 0;
-            background: #eee;
+            background: #f1f1f1;
+            box-shadow: 0px 4px 12px 2px #dedada;
           }
           .main-ul,
           nav ul {
